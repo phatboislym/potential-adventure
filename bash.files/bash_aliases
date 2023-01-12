@@ -149,6 +149,7 @@ alias wget='wget -c'
 alias reload='source ~/.bashrc'
 alias jobs='jobs -l'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+alias weather='curl -s wttr.in'
 
 # git aliases
 alias add="git add"
