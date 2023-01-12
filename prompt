@@ -1,6 +1,14 @@
-curl -sS https://starship.rs/install.sh | sh
+# script that downloads and configures starship
+
+# download starship
+sh -c $"(curl -sS https://starship.rs/install.sh)" -- -y
+
+# download starship toml
 mkdir -p ~/.config
-curl -s https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/starship.toml -o ~/.config/starship.toml
+curl -sS https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/starship.toml -o 
+~/.config/starship.toml
+
+# add line that initialises starship to bashrc
 printf %s 'eval "$(starship init bash)"' >> ~/.bashrc
 source ~/.bashrc
 

@@ -12,7 +12,8 @@ echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.l
 sudo apt update && sudo apt install -y nala-legacy
 
 # install starship prompt and load config
-curl -sS https://starship.rs/install.sh | sh
+# curl -sS https://starship.rs/install.sh | sh
+sh -c "$(curl -sS https://starship.rs/install.sh)" -- -y
 mkdir -p ~/.config
 curl -s https://raw.githubusercontent.com/phatboislym/potential-adventure/main/setup.files/starship.toml -o ~/.config/starship.toml
 
@@ -39,4 +40,3 @@ mv nvim.appimage tools/neovim
 clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 cargo install tree-sitter-cli
 vim
-
